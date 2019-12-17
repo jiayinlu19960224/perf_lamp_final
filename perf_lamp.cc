@@ -53,12 +53,9 @@ public:
     Vector3<T>& vertices(int idx) { return _vertices[idx]; }
 
 
-    // TODO: HW1
-    // part 2.1
     // Implement the function to do intersection between triangle and plane p
     // Input: plane p
     // Output: return pairs for intersections with three edges
-    // Hint:
     //      - enumerate three edges of the triangle and do intersection individually
     //      - consider the case that no intersection
     //      - consider how to avoid repeated intersection points in returned list
@@ -147,6 +144,7 @@ private:
     Vector3<T> _vertices[3];
 };
 
+//Code from: MIT 6.839 Advanced Computer Graphics
 //Read in a .stl file and store the triangles and the triangle normals to 
 //"triangles", and "normals"
 bool ReadSTL(std::string file_name,
@@ -432,6 +430,7 @@ public:
 
     double PI=3.14159265358979323846;
 
+    //Code from: MIT 6.839 Advanced Computer Graphics
     void WriteVoxelToMesh(const std::string& stl_file_name) const {
         const int nx = _nvoxel[0], ny = _nvoxel[1], nz = _nvoxel[2];
         std::vector<std::vector<Vector3<int>>> faces;
@@ -496,7 +495,7 @@ public:
         fout << "endsolid vcg" << std::endl;
     }
 
-    
+    //Code from: MIT 6.839 Advanced Computer Graphics
     void WriteVoxelToFile(const std::string &voxel_file) const {
         // File format: _pmin.x _pmin.y _pmin.z dx nx ny nz
         // Then a [nx+1][ny+1][nz+1] array of 0s and 1s.
@@ -614,7 +613,7 @@ void read_image(const char *fp, int pixel_m, int pixel_n, int **image_grid){
     }
 }
 
-
+//Code from: MIT 6.839 Advanced Computer Graphics
 //Marching Cube algorithm
 static const int ref_edge_table[256] = {
     0x0  , 0x109, 0x203, 0x30a, 0x406, 0x50f, 0x605, 0x70c,
@@ -909,7 +908,7 @@ static const int ref_tri_table[256][16] = {
     { 0, 3, 8, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1 },
     { -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1}
 };
-
+//Code from: MIT 6.839 Advanced Computer Graphics
 static const int corner_to_edge[8][3] = {
     { 0, 3, 8 },
     { 0, 1, 9 },
@@ -920,6 +919,7 @@ static const int corner_to_edge[8][3] = {
     { 5, 6, 10 },
     { 6, 7, 11 }
 };
+//Code from: MIT 6.839 Advanced Computer Graphics
 static const int edge_to_corner[12][2] = {
     { 0, 1 },
     { 1, 2 },
@@ -934,6 +934,7 @@ static const int edge_to_corner[12][2] = {
     { 2, 6 },
     { 3, 7 }
 };
+//Code from: MIT 6.839 Advanced Computer Graphics
 static const int corner_to_xyz[8][3] = {
     { 0, 0, 0 },
     { 0, 0, 1 },
@@ -944,7 +945,7 @@ static const int corner_to_xyz[8][3] = {
     { 1, 1, 1 },
     { 1, 1, 0 },
 };
-
+//Code from: MIT 6.839 Advanced Computer Graphics
 template<typename T>
 class MarchingCube {
 public:
