@@ -7,3 +7,6 @@ My final project for a really fun course, Harvard GSD course SCI 6338, Introduct
 
 Sorry, this documentation was crammed out overnight. If you found any errors, or have questions using the code, please don't hesitate to contact me at jiayinlu19960224@gmail.com. 
 I will keep updating and improving the code and documentation, if people actually use it! 
+
+
+![alt text](https://github.com/jiayinlu19960224/perf_lamp_final/blob/dba1d4e6811660d92452f91b6ece1d81b758021a/Screenshot%202023-10-15%20at%202.49.20%20PM.png)
